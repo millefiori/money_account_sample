@@ -18,9 +18,9 @@ end
 module MoneyAccountSample
   class Application < Rails::Application
     config.autoload_paths += %W(#{config.root}/lib)
-		config.time_zone = 'Tokyo'
-		config.paths[ "config/routes" ].concat Dir[Rails.root.join("config/routes/*.rb")]
-		config.assets.precompile += []
+    config.time_zone = 'Tokyo'
+    config.paths[ "config/routes" ].concat Dir[Rails.root.join("config/routes/*.rb")]
+    config.assets.precompile += []
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
