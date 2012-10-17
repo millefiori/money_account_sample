@@ -13,6 +13,17 @@
 
 ActiveRecord::Schema.define(:version => 20121017022659) do
 
+  create_table "money_accounts", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "value",      :limit => 8
+    t.boolean  "settlement",              :default => false
+    t.boolean  "enabled",                 :default => true
+    t.datetime "created_at",                                 :null => false
+    t.datetime "updated_at",                                 :null => false
+  end
+
+  add_index "money_accounts", ["user_id", "enabled"], :name => "index_money_accounts_on_user_id_and_enabled"
+
   create_table "users", :force => true do |t|
     t.integer  "money",      :limit => 8
     t.datetime "created_at",              :null => false

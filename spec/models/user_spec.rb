@@ -7,18 +7,12 @@ describe User do
 
 	unless defined?(User::PUBLISHED)
 		User.blueprint do
-			money {}
 		end
 	end
 
 	describe ".create" do
 		subject { User.make }
 		it { should be_valid }
-
-		context "money is nil" do
-			subject { User.make(money: nil) }
-			it { should be_valid }
-		end
 	end
 
 	describe ".destroy" do
