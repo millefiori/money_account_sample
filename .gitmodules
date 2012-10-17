@@ -1,0 +1,3 @@
+[submodule "lib/templates"]
+	path = lib/templates
+	url = git@github.com:millefiori/rails3-scaffold-template.git
